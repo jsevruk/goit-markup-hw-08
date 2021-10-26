@@ -1,14 +1,21 @@
 .preference__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
 }
 
 .preference__item {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .preference__icon-wrapper {
@@ -28,10 +35,14 @@
 
 .preference__title {
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   margin-bottom: 10px;
   text-transform: uppercase;
   color: var(--primary-title-color);
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .preference__text {

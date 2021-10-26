@@ -1,0 +1,39 @@
+.preference__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.preference__item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.preference__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background-color: var(--third-background-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.preference__icon-svg {
+  width: 70px;
+  height: 70px;
+}
+
+.preference__title {
+  font-weight: 700;
+  line-height: 1.14;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+}
+
+.preference__text {
+  line-height: 1.71;
+}

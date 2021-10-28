@@ -641,6 +641,7 @@ body {
 @media screen and (min-width: 1200px) {
   .team-title {
     font-size: 36px;
+    line-height: 1.17;
     margin-bottom: 50px;
   }
 }
@@ -697,21 +698,40 @@ body {
 }
 
 .clients-title {
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
   color: var(--primary-title-color);
-  margin-bottom: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
-  margin-top: -30px;
+  margin-bottom: -30px;
 }
 
 .clients-item {
-  flex-basis: calc(16.6666666667% - 30px);
+  flex-basis: calc(50% - 30px);
   margin-left: 30px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .clients-item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    flex-basis: calc(16.6666666667% - 30px);
+  }
 }
 
 .clients-link {

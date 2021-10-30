@@ -6,7 +6,15 @@
 
 .footer-contacts {
   display: flex;
-  align-items: baseline;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) {
+    align-items: baseline;
+  }
 }
 
 .footer-logo {
@@ -25,6 +33,9 @@
 
 .footer-address {
   font-style: normal;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer .footer-address-link {
@@ -51,24 +62,40 @@
 
 .footer-item {
   &:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+  }
+  &:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 }
 
 .footer-social {
-  margin-left: 70px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .footer-social-title {
   display: block;
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--secondary-title-color)
+  color: var(--secondary-title-color);
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer-social-list {

@@ -1,10 +1,13 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--primary-title-color);
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .modal-field{
@@ -98,8 +101,9 @@
 }
 
 .check-text {
-  line-height: 1.71;
-  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 31px;
 
   display: flex;
   align-items: center;
@@ -125,6 +129,11 @@
     .modal-checkbox:focus + & span {
       border: 2px solid var(--accent-color);
     }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 30px;
+  }
 }
 
 .check-color-href {

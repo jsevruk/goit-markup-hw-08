@@ -4,13 +4,18 @@
 
 .header__container {
   position: relative;
-  display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .header__navigation {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
   .header__menu-button {
@@ -92,7 +97,7 @@
     }
 }
 
-.header__item, .header__contacts-item {
+.header__item {
   &:not(:last-child) {
     margin-right: 50px;
   }
@@ -101,10 +106,20 @@
 .header__logo {
   font-family:'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-color);
-  margin-right: 95px;
+  //margin-right: 284px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+  }
 }
 
 .header__logo_black {
@@ -130,33 +145,43 @@
 }
 
 .header__contacts {
-  display: flex;
-  align-items: center;
   margin-left: auto;
 
   @media screen and (max-width: 767px) {
     display: none;
   }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.header__icon-envelope {
-  margin-right: 10px;
-  fill: currentColor;
+.header__contacts-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
 }
 
-.header__icon-smartphone {
+.header__icon-envelope, .header__icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    margin-right: 8px;
+  }
 }
 
 .header__contacts-link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
@@ -164,6 +189,13 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

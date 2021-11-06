@@ -1,0 +1,135 @@
+.mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile__menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: auto;
+  color: #000000;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.mobile__icon-close {
+  fill: currentColor;
+}
+
+.mobile__icon-menu {
+  fill: currentColor;
+}
+
+.menu-toggle.is-open .header__icon-close {
+  display: block;
+}
+
+.menu-toggle.is-open .header__icon-menu {
+  display: none;
+}
+
+.menu-container {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.16);
+    padding: 21px 25px 48px 40px;
+  }
+}
+
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile__menu-item{
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile__menu-link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--primary-title-color);
+}
+
+.link.mobile__menu-link__current {
+  color: var(--accent-color);
+}
+
+.mobile__position-bottom {
+
+}
+
+.mobile__contacts {
+  margin-bottom: 64px;
+}
+
+.mobile__contacts-item {
+  margin-bottom: 32px;
+}
+
+.mobile__contacts-tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile__contacts-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.mobile__social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mobile__social-item{
+  margin-right: 10px;
+}
+
+.mobile__social-link {
+  float: left;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  &:last-child {
+    margin-right: 10px;
+  }
+}
+
+.mobile__social-item:not(:last-child):after {
+  content: "";
+  width: 22px;
+  height: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}

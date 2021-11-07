@@ -108,7 +108,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  span {
+  .check-text-icon {
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
@@ -121,12 +121,12 @@
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-    .modal-checkbox:checked + & span {
+    .modal-checkbox:checked + & .check-text-icon {
       background-color: var(--accent-color);
       border: none;
     }
-    .modal-checkbox:hover + & span,
-    .modal-checkbox:focus + & span {
+    .modal-checkbox:hover + & .check-text-icon,
+    .modal-checkbox:focus + & .check-text-icon {
       border: 2px solid var(--accent-color);
     }
   @media screen and (min-width: 1200px) {
